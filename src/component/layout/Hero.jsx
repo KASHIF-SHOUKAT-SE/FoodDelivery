@@ -5,11 +5,10 @@ const Hero = () => {
   return (
     <>
         <section className="w-full mt-4 lg:mt-8">
-      <div className="max-w-[1528px] lg:h-[610px] mx-auto px-4 lg:px-0">
+<div className="max-w-[1528px] lg:h-[425px] mx-auto px-4 lg:px-0">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0B1023] lg:max-w-[1228px] lg:ml-5 min-h-[420px] lg:h-[485px]">
 
-        <div className="relative overflow-hidden rounded-2xl bg-[#0B1023] min-h-[420px] lg:min-h-0">
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[420px] lg:min-h-[140px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center  min-h-[420px] lg:h-[485px]">
 
             {/* Left Content */}
 
@@ -82,7 +81,7 @@ const Hero = () => {
 
               {/* Notification 1 */}
 
-              <div className="absolute top-16 right-8 bg-white rounded-xl p-4 shadow-xl z-20 w-[270px]">
+              <div className="absolute top-25 right-8 bg-white rounded-xl p-4 shadow-xl z-20 w-[270px]">
 
                 <h3 className="font-bold">
                   Order Received
@@ -96,7 +95,7 @@ const Hero = () => {
 
               {/* Notification 2 */}
 
-              <div className="absolute top-44 right-17 bg-white rounded-xl p-4 shadow-xl z-20 w-[270px]">
+              <div className="absolute top-59 right-17 bg-white rounded-xl p-4 shadow-xl z-20 w-[270px]">
 
                 <h3 className="font-bold">
                   Order Accepted
