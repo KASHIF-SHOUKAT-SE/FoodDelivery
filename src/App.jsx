@@ -20,7 +20,7 @@ export default App;
 // // import offers from './data/offers'
 // // import Categories from './Pages/Categories'
 // function App() {
-
+ 
 //   return (
 //     <div>
 //       {/* <Navbar/> */}
