@@ -6,7 +6,7 @@ const Hero = () => {
     <>
         <section className="w-full mt-4 lg:mt-8">
 <div className="max-w-[1528px] lg:h-[425px] mx-auto px-4 lg:px-0">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0B1023] lg:max-w-[1228px] lg:ml-5 min-h-[420px] lg:h-[485px]">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0B1023] w-full min-h-[420px] lg:h-[485px]">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center  min-h-[420px] lg:h-[485px]">
 

@@ -8,6 +8,7 @@ import AppPromo from '../component/AppPromo/AppPromo'
 import PartnersSection from '../component/PartnerCard/PartnersSection'
 import FAQSection from '../component/FAQSection/FAQSection'
 import StatsSection from '../component/StatsSection/StatsSection'
+import Footer from '../component/Footer/Footer'
 const Home = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const Home = () => {
         <PartnersSection/>
         <FAQSection/>
         <StatsSection/>
+        <Footer/>
     </div>
   )
 }

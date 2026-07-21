@@ -34,7 +34,6 @@ const Categories = () => {
 
       </div>
 
-
       {/* Desktop Layout */}
       <div className="hidden lg:block mt-[-220px]">
 
@@ -65,7 +64,6 @@ const Categories = () => {
               <li className="mt-2">
                 <button>Others</button>
               </li>
-
             </ul>
           </nav>
 
@@ -85,3 +83,7 @@ const Categories = () => {
 };
 
 export default Categories;
+
+
+
+
