@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import star from "../../assets/Icons/Topnav/🌟.png";
@@ -115,27 +116,41 @@ ml-10">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-16 text-[15px] font-medium">
 
-          <li className="bg-orange-500 text-white px-5 py-2 rounded-full cursor-pointer">
-            Home
-          </li>
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      isActive
+        ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+        : "hover:text-orange-500"
+    }
+  >
+    Home
+  </NavLink>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Browse Menu
-          </li>
+  <li className="cursor-pointer hover:text-orange-500">
+    Browse Menu
+  </li>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Special Offers
-          </li>
+  <li className="cursor-pointer hover:text-orange-500">
+    Special Offers
+  </li>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Restaurants
-          </li>
+  <NavLink
+    to="/restaurent"
+    className={({ isActive }) =>
+      isActive
+        ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+        : "hover:text-orange-500"
+    }
+  >
+    Restaurants
+  </NavLink>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Track Order
-          </li>
+  <li className="cursor-pointer hover:text-orange-500">
+    Track Order
+  </li>
 
-        </ul>
+</ul>
 
 
 
