@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import star from "../../assets/Icons/Topnav/🌟.png";
 import location from "../../assets/Icons/Topnav/Location.svg"
@@ -116,7 +117,7 @@ ml-10">
         <ul className="hidden lg:flex items-center gap-16 text-[15px] font-medium">
 
           <li className="bg-orange-500 text-white px-5 py-2 rounded-full cursor-pointer">
-            Home
+            <Link to="/">Home</Link>
           </li>
 
           <li className="cursor-pointer hover:text-orange-500">
@@ -132,7 +133,7 @@ ml-10">
           </li>
 
           <li className="cursor-pointer hover:text-orange-500">
-            Track Order
+            <Link to="/ordering">Ordering</Link>
           </li>
 
         </ul>
