@@ -1,7 +1,6 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import star from "../../assets/Icons/Topnav/🌟.png";
 import location from "../../assets/Icons/Topnav/Location.svg"
 import shoppingbasket from "../../assets/Icons/Topnav/Full Shopping Basket.svg"
@@ -116,28 +115,54 @@ ml-10">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-16 text-[15px] font-medium">
 
-          <li className="bg-orange-500 text-white px-5 py-2 rounded-full cursor-pointer">
-            <Link to="/">Home</Link>
-          </li>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Browse Menu
-          </li>
+<NavLink
+  to="/"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Home
+</NavLink>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Special Offers
-          </li>
+<li className="cursor-pointer hover:text-orange-500">
+  Browse Menu
+</li>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            Restaurants
-          </li>
+<li className="cursor-pointer hover:text-orange-500">
+  Special Offers
+</li>
 
-          <li className="cursor-pointer hover:text-orange-500">
-            <Link to="/ordering">Ordering</Link>
-          </li>
+<NavLink
+  to="/restaurent"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Restaurants
+</NavLink>
 
-        </ul>
+<NavLink
+  to="/ordering"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Ordering
+</NavLink>
 
+<li className="cursor-pointer hover:text-orange-500">
+  Track Order
+</li>
+
+
+</ul>
 
 
         {/* Desktop Login */}
