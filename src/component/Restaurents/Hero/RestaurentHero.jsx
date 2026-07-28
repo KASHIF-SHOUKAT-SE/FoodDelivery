@@ -6,7 +6,7 @@ import star from "../../../assets/Images/restaurent/hero/HeroSections/Rectangle 
 import heroBg from "../../../assets/Images/restaurent/hero/HeroSections/Group 23.svg";
 import pizza from "../../../assets/Images/restaurent/hero/HeroSections/Rectangle 44 (1).svg";
 
-const RestaurantHero = () => {
+const RestaurantHero = ({HeroImage= burger}) => {
   return (
     <>
     <section className="hidden lg:block w-full mt-10">
@@ -83,7 +83,7 @@ const RestaurantHero = () => {
 
           </div>
           <div className="relative">
-            <img src={burger} alt ="" className="max-w-[581px] h-[361px] object-cover rounded-xl"/>
+            <img src={HeroImage} alt ="" className="max-w-[581px] h-[361px] object-cover rounded-xl"/>
             <img
             src={star}
             alt="Rating Card"

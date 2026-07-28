@@ -6,7 +6,7 @@ const Order = () => {
   return (
     <div>
       
-    <div className="grid lg:grid-cols-[350px_1fr_350px] gap-6 mt-30">
+    <div className="grid lg:grid-cols-[350px_1fr_350px] gap-6 mt-10">
     <SidebarSection/>
     <ProductList/>
     <Basket/>

@@ -1,6 +1,7 @@
 const ProductCard = ({pizza}) => {
   return (
-    <div className="bg-white rounded-xl h-[380px] w-[750px] shadow-md p-5 mt-5">
+    // <div className="bg-white rounded-xl h-[380px] w-[750px] shadow-md p-5 mt-5">
+      <div className="bg-white rounded-xl h-[380px] w-[500px] lg:w-[750px] shadow-md p-5 mt-5">
       <div className="flex justify-between ">
       <div className="flex-1">
         {/* {left side} */}
