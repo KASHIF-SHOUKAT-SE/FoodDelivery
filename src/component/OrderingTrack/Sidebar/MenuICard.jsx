@@ -32,8 +32,7 @@ import promoImage from "../../../assets/Images/OrderingImages/orderingtrack/Prom
 
 const PromoCard = () => {
   return (
-    <div className="relative overflow-hidden rounded-xl mt-6">
-
+    <div className="hidden lg:block relative overflow-hidden rounded-xl mt-6">
       <img
         src={promoImage}
         alt="Promo"

@@ -14,13 +14,14 @@ import InformationSection from '../component/Restaurents/Information/Information
 import MapSection from '../component/Restaurents/Map/MapSection'
  import ReviewsSection from '../component/Restaurents/Reviews/ReviewsSection'
 import RestaurantPopular from "../component/Restaurents/PopularRestaurants/RestaurantPopular";
+import burger from '../assets/Images/restaurent/hero/HeroSections/burger.svg'
 
 const Restaurant = () => {
   return (
     <>
       <Navbar />
-      <RestaurentHero/>
-      <Search/>
+      <RestaurentHero HeroImage={burger}/>
+      <Search name="All Offers from McDonald’s East London"/>
       < RestaurantCategoryNavbar />
       <OffersSection />
       <BurgersSection />
