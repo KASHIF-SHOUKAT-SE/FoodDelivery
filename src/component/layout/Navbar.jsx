@@ -10,10 +10,11 @@ import logo from "../../assets/Icons/mainnav/LOGO 1.svg"
 import malelogo from "../../assets/Icons/mainnav/Male User.svg"
 import Female from '../../assets/Images/Herosection/Female.svg'
 
- 
+import SpecialOfferModal from '../SpecialOffer/SpecialOfferModal';
 
 const Navbar = () => {
       const [open, setOpen] = useState(false);
+      const [isSpecialOfferOpen, setIsSpecialOfferOpen] = useState(false);
 
   return (
     <>
@@ -131,7 +132,17 @@ ml-10">
     Browse Menu
   </li>
 
-  <li className="cursor-pointer hover:text-orange-500">
+  {/* <li className="cursor-pointer hover:text-orange-500">
+    Special Offers
+  </li> */}
+
+  <li 
+    className="cursor-pointer hover:text-orange-500"
+    onClick={(e) => {
+      e.preventDefault();
+      setIsSpecialOfferOpen(true);
+    }}
+  >
     Special Offers
   </li>
 
@@ -187,7 +198,16 @@ ml-10">
 
           <li className='ml-5'>Browse Menu</li>
 
-          <li className='ml-5'>Special Offers</li>
+          <li 
+            className='ml-5 cursor-pointer hover:text-orange-500'
+            onClick={(e) => {
+              e.preventDefault();
+              setIsSpecialOfferOpen(true);
+              setOpen(false);
+            }}
+          >
+            Special Offers
+          </li>
 
           <li className='ml-5'>Restaurants</li>
 
@@ -235,10 +255,19 @@ ml-10">
   </div>
 
 </div>
-      
-     
+
+
+      <SpecialOfferModal 
+        isOpen={isSpecialOfferOpen} 
+        onClose={() => setIsSpecialOfferOpen(false)} 
+      />
     </>
   );
 };
 
 export default Navbar;
+
+
+
+
+

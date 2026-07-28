@@ -1,0 +1,53 @@
+/* ============================================
+   Instructions Modal - Custom Styles
+   ============================================ */
+
+/* Textarea custom styling */
+.instructions-textarea {
+  width: 100%;
+  min-height: 180px;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #03081F;
+  resize: vertical;           /* Sirf vertically resize ho sakta hai */
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.instructions-textarea::placeholder {
+  color: #B0B0B0;
+  font-style: italic;
+}
+
+.instructions-textarea:focus {
+  border-color: #FC8A06;      /* Focus par orange border */
+}
+
+/* Overlay fade-in */
+.instructions-overlay {
+  animation: instrFadeIn 0.25s ease-out;
+}
+
+/* Modal slide-up */
+.instructions-modal {
+  animation: instrSlideUp 0.3s ease-out;
+}
+
+@keyframes instrFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes instrSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
