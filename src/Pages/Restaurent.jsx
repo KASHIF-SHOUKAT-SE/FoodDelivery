@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../component/layout/Navbar'
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -12,18 +12,22 @@ import FriesSection from '../component/Restaurents/Categories/FriesSection'
 import ColdDrinksSection from '../component/Restaurents/Categories/ColdDrinksSection'
 import InformationSection from '../component/Restaurents/Information/InformationSection'
 import MapSection from '../component/Restaurents/Map/MapSection'
- import ReviewsSection from '../component/Restaurents/Reviews/ReviewsSection'
+import ReviewsSection from '../component/Restaurents/Reviews/ReviewsSection'
 import RestaurantPopular from "../component/Restaurents/PopularRestaurants/RestaurantPopular";
-import burger from '../assets/Images/restaurent/hero/HeroSections/burger.svg'
+import Footer from '../component/Footer/Footer'
+import SpecialOfferModal from '../component/SpecialOffer/SpecialOfferModal'
+import burger from '../../assets/images/restaurant/hero/HeroSections/burger.svg'
 
 const Restaurant = () => {
+  const [showOffer, setShowOffer] = useState(false);
+
   return (
     <>
       <Navbar />
       <RestaurentHero HeroImage={burger}/>
-      <Search name="All Offers from McDonald’s East London"/>
+      <Search name="All offers from McDonald's East London"/>
       < RestaurantCategoryNavbar />
-      <OffersSection />
+      <OffersSection onSpecialOfferClick={() => setShowOffer(true)} />
       <BurgersSection />
       <FriesSection />
       <ColdDrinksSection />
@@ -31,9 +35,13 @@ const Restaurant = () => {
       <MapSection />
       <ReviewsSection />
       <RestaurantPopular />
+      <Footer />
 
-
-
+      {/* Special Offer Modal (MealDeal → Customize Pizza flow) */}
+      <SpecialOfferModal
+        isOpen={showOffer}
+        onClose={() => setShowOffer(false)}
+      />
     </>
   );
 };

@@ -12,7 +12,7 @@ import Female from '../../assets/Images/Herosection/Female.svg'
 import Login from "../Login/Login/Login";
 import Signup from "../Login/SignUp/Signup";
 
- 
+import SpecialOfferModal from '../SpecialOffer/SpecialOfferModal';
 
 const Navbar = () => {
       const [open, setOpen] = useState(false);  
@@ -120,6 +120,51 @@ ml-10">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-16 text-[15px] font-medium">
 
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      isActive
+        ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+        : "hover:text-orange-500"
+    }
+  >
+    Home
+  </NavLink>
+
+  <li className="cursor-pointer hover:text-orange-500">
+    Browse Menu
+  </li>
+
+  {/* <li className="cursor-pointer hover:text-orange-500">
+    Special Offers
+  </li> */}
+
+  <li 
+    className="cursor-pointer hover:text-orange-500"
+    onClick={(e) => {
+      e.preventDefault();
+      setIsSpecialOfferOpen(true);
+    }}
+  >
+    Special Offers
+  </li>
+
+  <NavLink
+    to="/restaurent"
+    className={({ isActive }) =>
+      isActive
+        ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+        : "hover:text-orange-500"
+    }
+  >
+    Restaurants
+  </NavLink>
+
+  <li className="cursor-pointer hover:text-orange-500">
+    Track Order
+  </li>
+
+</ul>
 
 <NavLink
   to="/"
@@ -355,3 +400,8 @@ ml-10">
 };
 
 export default Navbar;
+
+
+
+
+

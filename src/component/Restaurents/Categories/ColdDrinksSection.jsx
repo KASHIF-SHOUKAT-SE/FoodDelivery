@@ -3,7 +3,7 @@ import { coldDrinksData } from "../../../data/RetaurentData/coldDrinksData";
 
 const ColdDrinksSection = () => {
   return (
-    <section className="w-full mt-16">
+    <section className="hidden md:block w-full mt-16">
 
       <div className="max-w-[1528px] mx-auto px-5">
 

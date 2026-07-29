@@ -1,0 +1,93 @@
+/* ============================================
+   Customise Pizza Modal - Custom Styles
+   ============================================ */
+
+/* Custom green checkbox styling */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #E0E0E0;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #028643;
+  border-color: #028643;
+}
+
+.custom-checkbox:checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-checkbox:hover:not(:checked):not(:disabled) {
+  border-color: #FC8A06;
+}
+
+.custom-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* Category section with light border */
+.topping-category {
+  border: 1.5px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Scrollbar styling for toppings area */
+.toppings-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toppings-scroll::-webkit-scrollbar-thumb {
+  background-color: #FC8A06;
+  border-radius: 4px;
+}
+
+.toppings-scroll::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Overlay fade-in animation */
+.customize-pizza-overlay {
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Modal slide-up animation */
+.customize-pizza-modal {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

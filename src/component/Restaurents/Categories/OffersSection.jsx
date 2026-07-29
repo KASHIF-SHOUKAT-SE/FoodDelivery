@@ -1,7 +1,7 @@
 import OfferCard from "./OfferCard";
 import { offersData } from "../../../data/RetaurentData/offersData";
 
-const OffersSection = () => {
+const OffersSection = ({ onSpecialOfferClick }) => {
   return (
     
     <section className="w-full mt-10">
@@ -15,6 +15,7 @@ const OffersSection = () => {
             <OfferCard
               key={offer.id}
               offer={offer}
+              onClick={onSpecialOfferClick}
             />
           ))}
 

@@ -144,11 +144,14 @@ import pin from "../../../assets/Icons/MapIcon/Previous Location.svg";
 
 const MapSection = () => {
   return (
-    <section className="w-full mt-16 mb-20">
+    <section className="w-full mt-16 mb-20 px-4 lg:px-0">
       <div
         className="
           relative
           max-w-[1528px]
+          mx-auto
+          h-[660px]
+          lg:h-[659px]
           h-[659px]
           mx-auto
           rounded-xl
@@ -225,14 +228,17 @@ const MapSection = () => {
           {/* White Card */}
           <div
             className="
-              w-[231px]
-              h-[73px]
+              w-[190px]
+              h-[65px]
+              lg:w-[231px]
+              lg:h-[73px]
               bg-white
               rounded-lg
               shadow-lg
               flex
               items-center
-              px-5
+              px-4
+              lg:px-5
               z-10
             "
           >
@@ -247,26 +253,93 @@ const MapSection = () => {
             </div>
           </div>
 
-          {/* Pin Circle */}
+          {/* Pin */}
           <div
             className="
-              -ml-4
-              w-[45px]
-              h-[45px]
+              -ml-3
+              w-10
+              h-10
+              lg:w-[45px]
+              lg:h-[45px]
               rounded-full
               bg-[#03081F]
               flex
               items-center
               justify-center
               shadow-lg
-              z-20
-            "
-          >
+              z-20"
+            >
             <img
               src={pin}
               alt="Location"
-              className="w-[20px] h-[20px]"
+              className="w-[18px] h-[18px] lg:w-[20px] lg:h-[20px]"
             />
+          </div>
+        </div>
+
+        {/* Information Card */}
+        <div
+          className="
+            absolute
+
+            left-1/2
+            -translate-x-1/2
+            top-[85px]
+
+            w-[88%]
+            max-w-[466px]
+
+            bg-[#03081F]
+            rounded-xl
+            p-6
+
+            text-white
+            z-20
+
+            lg:left-[60px]
+            lg:translate-x-0
+            lg:top-[60px]
+            lg:w-[466px]
+            lg:h-[539px]
+            lg:p-8
+          "
+        >
+          <h2 className="text-4xl lg:text-[42px] font-bold leading-none">
+            McDonald's
+          </h2>
+
+          <h3 className="text-[#FC8A06] text-2xl lg:text-[26px] font-semibold mt-2 mb-6 lg:mb-8">
+            South London
+          </h3>
+
+          <p className="text-base lg:text-[18px] leading-8 text-gray-300">
+            Tooley St,
+            <br />
+            London Bridge,
+            <br />
+            London SE1 2TF,
+            <br />
+            United Kingdom
+          </p>
+
+          <div className="mt-8 lg:mt-12">
+            <h4 className="text-xl lg:text-[22px] font-bold">
+              Phone number
+            </h4>
+
+            <p className="mt-3 text-2xl lg:text-[28px] text-[#FC8A06]">
+              +934443-43
+            </p>
+          </div>
+
+          <div className="mt-8 lg:mt-10">
+            <h4 className="text-xl lg:text-[22px] font-bold">
+              Website
+            </h4>
+
+            <p className="mt-3 text-2xl lg:text-[28px] text-[#FC8A06] break-words">
+              http://mcdonalds.uk/
+            </p>
           </div>
         </div>
       </div>

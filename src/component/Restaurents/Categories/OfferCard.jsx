@@ -1,8 +1,11 @@
 import { Plus } from "lucide-react";
 
-const OfferCard = ({ offer }) => {
+const OfferCard = ({ offer, onClick }) => {
   return (
-    <div className="relative w-full h-[325px] rounded-xl overflow-hidden group cursor-pointer">
+    <div
+      className="relative w-full h-[325px] rounded-xl overflow-hidden group cursor-pointer"
+      onClick={onClick}
+    >
 
       <img
         src={offer.image}
