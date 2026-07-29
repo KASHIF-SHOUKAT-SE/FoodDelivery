@@ -55,7 +55,7 @@ import search from "../../../assets/Images/restaurent/hero/HeroSections/Search M
 
 
 
-const Search = () => {
+const Search = ({name}) => {
   return (
     <section className="w-full mt-10">
 
@@ -63,7 +63,7 @@ const Search = () => {
       <div className="hidden lg:flex max-w-[1528px] mx-auto px-5 items-center justify-between">
 
         <h2 className="text-[32px] font-bold text-[#03081F]">
-          All Offers from McDonald's East London
+         {name}
         </h2>
 
         <div className="relative">

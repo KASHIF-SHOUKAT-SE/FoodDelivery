@@ -9,18 +9,21 @@ import forward from "../../assets/Icons/Topnav/Forward Button.svg"
 import logo from "../../assets/Icons/mainnav/LOGO 1.svg"
 import malelogo from "../../assets/Icons/mainnav/Male User.svg"
 import Female from '../../assets/Images/Herosection/Female.svg'
+import Login from "../Login/Login/Login";
+import Signup from "../Login/SignUp/Signup";
 
 import SpecialOfferModal from '../SpecialOffer/SpecialOfferModal';
 
 const Navbar = () => {
-      const [open, setOpen] = useState(false);
-      const [isSpecialOfferOpen, setIsSpecialOfferOpen] = useState(false);
+      const [open, setOpen] = useState(false);  
+      const [showLogin, setShowLogin] = useState(false);
+      const [showSignup, setShowSignup] = useState(false);
 
   return (
     <>
       {/* Top Navbar */}
-      <div className="hidden lg:block w-full bg-white border border-gray-200 rounded-b-2xl">
-  <div className="max-w-[1528px] h-[70px] mx-auto flex items-center justify-between">
+      <div className='hidden lg:block'>
+  <div className="max-w-[1528px]  h-[70px] mx-auto flex items-center justify-between">
 
     {/* Left Side */}
     <div className="flex items-center gap-2 text-sm 
@@ -163,16 +166,81 @@ ml-10">
 
 </ul>
 
+<NavLink
+  to="/"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Home
+</NavLink>
+
+<li className="cursor-pointer hover:text-orange-500">
+  Browse Menu
+</li>
+{/* 
+<NavLink
+  to="/special-offers"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Special Offers
+</NavLink> */}
+
+<li className="cursor-pointer hover:text-orange-500">
+  Special Offers
+</li>
+
+
+<NavLink
+  to="/restaurent"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Restaurants
+</NavLink>
+
+<NavLink
+  to="/ordering"
+  className={({ isActive }) =>
+    isActive
+      ? "bg-orange-500 text-white px-5 py-2 rounded-full"
+      : "hover:text-orange-500"
+  }
+>
+  Ordering
+</NavLink>
+
+<li className="cursor-pointer hover:text-orange-500">
+  Track Order
+</li>
+
+
+</ul>
 
 
         {/* Desktop Login */}
-        <button className="hidden lg:flex items-center gap-2 bg-[#0A1633] text-white px-6 py-3 rounded-full">
+   {/* Desktop Login */}
+<button
+  onClick={() => {
+    setShowLogin(true);
+    setShowSignup(false);
+  }}
+  className="hidden lg:flex items-center gap-2 bg-[#0A1633] text-white px-6 py-3 rounded-full"
+>
   <img
     src={malelogo}
     alt="User"
     className="w-5 h-5"
   />
-
   Login / Signup
 </button>
 
@@ -189,38 +257,66 @@ ml-10">
 
 
       {/* Mobile Menu */}
-      {open && (
-        <ul className="md:hidden bg-white px-6 pb-5 space-y-4 text-[15px] font-medium">
+    {open && (
+  <ul className="md:hidden bg-white px-6 pb-5 space-y-4 text-[15px] font-medium">
 
-          <li className="bg-orange-500 text-white px-5 py-2 rounded-full ">
-            Home
-          </li>
+    <NavLink
+      to="/"
+      onClick={() => setOpen(false)}
+      className={({ isActive }) =>
+        isActive
+          ? "block bg-orange-500 text-white px-5 py-2 rounded-full"
+          : "block ml-5 hover:text-orange-500"
+      }
+    >
+      Home
+    </NavLink>
 
-          <li className='ml-5'>Browse Menu</li>
+    <li className="ml-5">Browse Menu</li>
 
-          <li 
-            className='ml-5 cursor-pointer hover:text-orange-500'
-            onClick={(e) => {
-              e.preventDefault();
-              setIsSpecialOfferOpen(true);
-              setOpen(false);
-            }}
-          >
-            Special Offers
-          </li>
+    <li className="ml-5">SpecialOffers</li>
 
-          <li className='ml-5'>Restaurants</li>
+    <NavLink
+      to="/restaurent"
+      onClick={() => setOpen(false)}
+      className={({ isActive }) =>
+        isActive
+          ? "block bg-orange-500 text-white px-5 py-2 rounded-full"
+          : "block ml-5 hover:text-orange-500"
+      }
+    >
+      Restaurants
+    </NavLink>
 
-          <li className='ml-5'>Track Order</li>
+    <NavLink
+      to="/ordering"
+      onClick={() => setOpen(false)}
+      className={({ isActive }) =>
+        isActive
+          ? "block bg-orange-500 text-white px-5 py-2 rounded-full"
+          : "block ml-5 hover:text-orange-500"
+      }
+    >
+      Ordering
+    </NavLink>
 
-          <li>
-            <button className="bg-[#0A1633] text-white px-6 py-3 rounded-full w-full">
-              Login / Signup
-            </button>
-          </li>
+    <li className="ml-5">Track Order</li>
 
-        </ul>
-      )}
+<li>
+  <button
+    onClick={() => {
+      setShowLogin(true);
+      setShowSignup(false);
+      setOpen(false);
+    }}
+    className="bg-[#0A1633] text-white px-6 py-3 rounded-full w-full"
+  >
+    Login / Signup
+  </button>
+</li>
+
+  </ul>
+)}
 
     </nav>
     {/* Mobile User + Cart */}
@@ -255,12 +351,50 @@ ml-10">
   </div>
 
 </div>
+      {showLogin && (
+        <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+          <div className="relative">
+            <button
+              onClick={() => setShowLogin(false)}
+              className="absolute top-34 right-0 bg-orange-500 text-white w-10 h-10 rounded-full"
+            >
+              ✕
+            </button>
+
+            <Login
+  onSignupClick={() => {
+    setShowLogin(false);
+    setShowSignup(true);
+  }}
+/>
+          </div>
+        </div>
+      )}
 
 
-      <SpecialOfferModal 
-        isOpen={isSpecialOfferOpen} 
-        onClose={() => setIsSpecialOfferOpen(false)} 
-      />
+      {showSignup && (
+  <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+
+    <div className="relative">
+
+      <button
+        onClick={() => setShowSignup(false)}
+        className="absolute top-1 -right-4 bg-orange-500 text-white w-10 h-10 rounded-full"
+      >
+        ✕
+      </button>
+
+      <Signup
+  onLoginClick={() => {
+    setShowSignup(false);
+    setShowLogin(true);
+  }}
+/>
+
+    </div>
+
+  </div>
+)}
     </>
   );
 };
