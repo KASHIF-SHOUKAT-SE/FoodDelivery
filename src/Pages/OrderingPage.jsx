@@ -12,10 +12,12 @@ import InformationSection from '../component/Restaurents/Information/Information
 import MapSection from '../component/Restaurents/Map/MapSection'
 import ReviewsSection from '../component/Restaurents/Reviews/ReviewsSection'
 import RestaurantPopular from '../component/Restaurents/PopularRestaurants/RestaurantPopular'
+import Footer from '../component/Footer/Footer'
 const OrderingPage = () => {
   return (
-     <section className="max-w-[1528px] mx-auto px-4 mt-10">
-      <Navbar/>
+    <>
+     <section className="max-w-[1528px] mx-auto px-4 ">
+      <Navbar className=""/>
         <Hero HeroImage={pizza}/>
         <Search name="Order from Tandoori Pizza London"/>
         <Order/>
@@ -23,6 +25,7 @@ const OrderingPage = () => {
         <MapSection/>
         <ReviewsSection/>
         <RestaurantPopular/>
+      
       {/* <div className="grid lg:grid-cols-[367px_1fr_367px] gap-6 mt-70">
         
         <SidebarSection/>
@@ -31,7 +34,26 @@ const OrderingPage = () => {
        
     </div> */}
     </section>
+    <Footer/>
+    </>
   )
 }
 
 export default OrderingPage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
