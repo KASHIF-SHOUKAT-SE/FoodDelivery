@@ -7,7 +7,8 @@ const SignupForm = ({ onLoginClick }) => {
   const [showConfirm, setShowConfirm] = useState(false);
 
   return (
-    <div className="w-full max-w-md bg-white p-4 rounded-2xl shadow-xl">
+        <div className="w-[600px] h-[930px] bg-white p-8 rounded-2xl shadow-xl">
+
 
       <h1 className="text-3xl font-bold text-center">
         Create Account

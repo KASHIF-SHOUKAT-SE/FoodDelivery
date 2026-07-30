@@ -1,6 +1,7 @@
 import categories from "../../../data/Popular categories";
 import CategoryCard from "./CategoryCard";
 
+
 const Categories = () => {
   return (
     <section className="max-w-[1528px] mx-auto px-4 mt-12">

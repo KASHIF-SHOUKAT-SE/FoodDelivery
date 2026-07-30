@@ -2,7 +2,9 @@ import offers from "../../../data/offers";
 import OfferCard from "../../Categories/Exclusive/OfferCard";
 
 const Categories = () => {
+
   return (
+    
     <section className="max-w-[1528px] mx-auto mt-10 lg:mt-80 px-4">
 
       {/* Mobile Layout */}
