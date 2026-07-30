@@ -296,7 +296,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setShowLogin(false)}
-              className="absolute top-34 right-0 bg-orange-500 text-white w-10 h-10 rounded-full"
+              className="absolute top-0.8 right-3 bg-[#FC8A06] text-white w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-orange-600 transition shadow-lg z-10 cursor-pointer"
             >
               ✕
             </button>
@@ -316,7 +316,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setShowSignup(false)}
-              className="absolute top-1 -right-4 bg-orange-500 text-white w-10 h-10 rounded-full"
+              className="absolute top-0.8 right-2.5 bg-[#FC8A06] text-white w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-orange-600 transition shadow-lg z-10 cursor-pointer"
             >
               ✕
             </button>
