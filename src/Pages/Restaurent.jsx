@@ -16,7 +16,7 @@ import ReviewsSection from '../component/Restaurents/Reviews/ReviewsSection'
 import RestaurantPopular from "../component/Restaurents/PopularRestaurants/RestaurantPopular";
 import Footer from '../component/Footer/Footer'
 import SpecialOfferModal from '../component/SpecialOffer/SpecialOfferModal'
-import burger from '../../assets/images/restaurant/hero/HeroSections/burger.svg'
+import burger from '../assets/Images/restaurent/hero/HeroSections/burger.svg'
 
 const Restaurant = () => {
   const [showOffer, setShowOffer] = useState(false);

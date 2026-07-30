@@ -1,0 +1,73 @@
+/* ============================================
+   Coupon / Post Code Modal - Custom Styles
+   ============================================ */
+
+/* Overlay animation */
+.coupon-overlay {
+  animation: couponFadeIn 0.25s ease-out;
+}
+
+/* Modal animation */
+.coupon-modal {
+  animation: couponSlideUp 0.3s ease-out;
+}
+
+@keyframes couponFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes couponSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Postcode Input */
+.postcode-input {
+  width: 100%;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 999px;
+  /* Fully rounded */
+  padding: 14px 20px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #03081F;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.postcode-input::placeholder {
+  color: #B0B0B0;
+}
+
+.postcode-input:focus {
+  border-color: #FC8A06;
+  /* Focus par orange border */
+}
+
+/* OR Divider */
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: #FC8A06;
+}
