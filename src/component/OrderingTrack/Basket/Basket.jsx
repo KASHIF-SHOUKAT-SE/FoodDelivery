@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import CouponModal from '../../Coupon/CouponModal';
 import FullBasket from '../../../assets/Images/OrderingImages/basketicon/Shopping Basket.svg'
 import BasketItem from './BasketItem'
 import Basketdata from '../../../data/OrderingData/basket'
@@ -6,6 +8,9 @@ import Delivery from '../../../assets/Images/OrderingImages/basketicon/Delivery 
 import Newstore from '../../../assets/Images/OrderingImages/basketicon/New Store.svg'
 import Clock  from '../../../assets/Images/OrderingImages/basketicon/Clock.svg'
 const Basket = () => {
+  // ✅ YAHAN ADD KIYA: Coupon popup show/hide karne ki state
+  const [showCoupon, setShowCoupon] = useState(false);
+
   return (
   <div className=''>
         <button className='flex border rounded-lg w-full bg-[#FC8A06] p-5 text-white' >
@@ -63,7 +68,10 @@ const Basket = () => {
             <span>Choose your free item.</span>
             <span><img src={Forwardbtn} alt="forward" /></span>
           </button>
-          <button className='flex justify-between w-full border rounded-full px-4 py-3 '>
+          <button 
+            className='flex justify-between w-full border rounded-full px-4 py-3 cursor-pointer'
+            onClick={() => setShowCoupon(true)} // ✅ YAHAN ADD KIYA: Button press par popup open ho
+          >
             <span>Apply Coupon Code here</span>
             <span><img src={Forwardbtn} alt="" /></span>
           </button>
@@ -100,6 +108,13 @@ const Basket = () => {
        </div>
       
        </div>
+
+       {/* ✅ YAHAN ADD KIYA: CouponModal component */}
+       <CouponModal 
+         isOpen={showCoupon} 
+         onClose={() => setShowCoupon(false)} 
+       />
+
        </div>
   )
 }
